@@ -3,22 +3,27 @@ Este es un programa diseñado con el fin de gestionar una base de datos de canci
 
 ## Funcionalidades
 
-**El programa incluye las siguientes funcionalidades:**
-  1. Cargar canciones desde un archivo CSV
-    Carga todas las canciones de un archivo CSV en memoria. Cada canción tiene información como género, artista, tempo y otros atributos relevantes.
+### El programa incluye las siguientes funcionalidades:
 
-  2. Buscar canciones por género
-    Permite al usuario ingresar un género (por ejemplo, "acoustic", "samba", "soul", "anime") y listar todas las canciones que coincidan con ese género.
 
-  3. Buscar canciones por artista
-  El usuario puede ingresar el nombre de un artista y se mostrarán todas las canciones asociadas a ese artista.
+**1. Cargar canciones desde un archivo CSV**
 
-  4. Buscar canciones por tempo
-    El usuario puede filtrar canciones por su tempo (velocidad), eligiendo entre:
-      - Lentas: Tempo menor a 80 BPM.
-      - Moderadas: Tempo entre 80 y 120 BPM.
-      - Rápidas: Tempo mayor a 120 BPM.
+Carga todas las canciones de un archivo CSV en memoria. Cada canción tiene información como género, artista, tempo y otros atributos relevantes.
 
+**2. Buscar canciones por género**
+
+Permite al usuario ingresar un género (por ejemplo, "acoustic", "samba", "soul", "anime") y listar todas las canciones que coincidan con ese género.
+
+**3. Buscar canciones por artista**
+
+El usuario puede ingresar el nombre de un artista y se mostrarán todas las canciones asociadas a ese artista.
+
+**4. Buscar canciones por tempo**
+
+El usuario puede filtrar canciones por su tempo (ritmo), eligiendo entre:
+  1) **Lentas:** Tempo menor a 80 BPM.
+  2) **Moderadas:** Tempo entre 80 y 120 BPM.
+  3) **Rápidas:** Tempo mayor a 120 BPM.
 
 ## Requisitos
 
@@ -145,3 +150,8 @@ Tempo: 0.00 BPM
 2) Volver al menú
 ````
 En el menú de Genero y Tempo, luego de mostrar 20 canciones, se abre un **menú para evitar sobre carga de informacion**. Esto se puede cambiar en `MAX_SONGS_TEMPO` en las primeras lineas del código.
+
+## Errores conocidos:
+- Todos los **menús interactivos** esperan números  como respuesta, si se ingresa texto en estos campos es esperable que ocurran errores.
+
+- No hay un seguro sobre cargar mas de una vez el archivo. Si se cargan **dos o mas veces** es esperable que hayan multiples problemas
